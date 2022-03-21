@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  
+  <title>Frontend Mentor | Advice generator app</title>
+</head>
+<body>
+
+  <main>
+    <div class="advice">
+      <h1 class="advice__title" id="advice_id">ADVICE #117</h1>
+      <p class="advice__text" id="advice_text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, temporibus. Adipisci velit molestiae voluptatum possimus maiores! Porro impedit fugiat ullam!</p>
+      <img class="advice__divider" src="images/pattern-divider-desktop.svg" alt="Divider Image">
+      <button class="btn advice__btn" id="btn_nextAdvice"><img src="images/icon-dice.svg" alt="Dice button"></button>
+    </div>
+  </main>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="https://www.frontendmentor.io/profile/ArbonaJulien">Julien Arbona</a>.
+  </div>
+
+  <script>
+    let url = "https://api.adviceslip.com/advice";
+
+    function get_advice(url){
+      fetch(url)
+      .then(response => response.json())
+      .then(data => {
+        document.getElementById('advice_id').innerHTML = 'ADVICE #' + data.slip.id;
+        document.getElementById('advice_text').innerHTML = '"' + data.slip.advice + '"';
+      })
+    }
+
+    get_advice(url);
+    
+    document.getElementById('btn_nextAdvice').addEventListener('click', () => {
+      get_advice(url);
+    });
+
+  </script>
+</body>
+</html>

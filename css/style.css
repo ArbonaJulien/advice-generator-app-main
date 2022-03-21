@@ -1,0 +1,133 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap");
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.attribution a {
+  color: #52ffa8;
+  text-decoration: none;
+}
+
+.attribution a:hover {
+  text-decoration: underline;
+}
+
+html, body, h1, p {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #1f2632;
+  font-family: 'Manrope', sans-serif;
+  font-size: 28px;
+  color: #cee3e9;
+}
+
+main {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+.advice {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #323a49;
+  max-width: 500px;
+  font-size: .7em;
+  padding: 0 40px;
+  border-radius: 10px;
+  -webkit-filter: drop-shadow(5px 5px 10px rgba(27, 27, 27, 0.445));
+          filter: drop-shadow(5px 5px 10px rgba(27, 27, 27, 0.445));
+}
+
+.advice__title {
+  color: #52ffa8;
+  font-size: .5em;
+  letter-spacing: 3px;
+  margin: 30px 0;
+}
+
+.advice__text {
+  font-size: .9em;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.advice__divider {
+  margin: 40px 0 60px 0;
+}
+
+.advice__btn {
+  position: absolute;
+  bottom: -30px;
+}
+
+.btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 30px;
+  background-color: #52ffa8;
+  border: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  -webkit-filter: drop-shadow(0 0 15px #52ffa8);
+          filter: drop-shadow(0 0 15px #52ffa8);
+}
+
+@media screen and (max-width: 600px) {
+  main {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .advice {
+    max-width: unset;
+    margin: 0 10px;
+    padding: 0 10px;
+  }
+  .advice__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    font-size: .6em;
+  }
+  .advice__divider {
+    content: url("../images/pattern-divider-mobile.svg");
+  }
+}
+/*# sourceMappingURL=style.css.map */

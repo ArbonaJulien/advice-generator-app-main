@@ -1,0 +1,112 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+
+$grayish-blue: hsl(217, 19%, 38%);
+$dark-grayish-Blue: hsl(217, 19%, 24%);
+$dark-blue: hsl(218, 23%, 16%);
+$light-cyan: hsl(193, 38%, 86%);
+$neon-green: hsl(150, 100%, 66%);
+
+$btn-size: 60px;
+
+.attribution { font-size: 11px; text-align: center; margin-bottom: 10px; }
+.attribution a { color: $neon-green; text-decoration: none; }
+.attribution a:hover {
+    text-decoration: underline;
+}
+
+
+html, body, h1, p {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: $dark-blue;
+    font-family: 'Manrope', sans-serif;
+    font-size: 28px;
+    color: $light-cyan;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.advice {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $dark-grayish-Blue;
+    max-width: 500px;
+    font-size: .7em;
+    padding: 0 40px;
+    border-radius: 10px;
+    filter: drop-shadow(5px 5px 10px rgba(27, 27, 27, 0.445));
+
+    &__title {
+        color: $neon-green;
+        font-size: .5em;
+        letter-spacing: 3px;
+        margin: 30px 0;
+    }
+
+    &__text {
+        font-size: .9em;
+        letter-spacing: 1px;
+        font-weight: 700;
+        text-align: center;
+    }
+
+    &__divider {
+        margin: 40px 0 60px 0;
+    }
+
+    &__btn {
+        position: absolute;
+        bottom: -$btn_size / 2;
+    }
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $btn-size;
+    height: $btn-size;
+    border-radius: $btn-size / 2;
+    background-color: $neon-green;
+    border: none;
+    cursor: pointer;
+
+    &:hover {
+        filter: drop-shadow(0 0 15px $neon-green);
+    }
+}
+
+@media  screen and (max-width: 600px) {
+    
+    main {
+        justify-content: center;
+        align-items: center;
+    }
+
+    .advice {
+        max-width: unset;
+        margin: 0 10px;
+        padding: 0 10px;
+
+        &__text {
+            display: flex;
+            font-size: .6em;
+        }
+
+        &__divider {
+            content: url('../images/pattern-divider-mobile.svg');
+        }
+    }
+
+}
